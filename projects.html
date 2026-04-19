@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Jake Altom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 style="font-size: 1.5rem;"><a href="index.html" style="text-decoration: none; color: inherit;">J. Altom</a></h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="resume.html">Resume</a>
+            <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reveal">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+            </div>
+            
+            <p style="margin-bottom: 3rem; max-width: 700px;">
+                A collection of work spanning artificial intelligence, psychological research, and interactive design. Each project represents a step toward more symbiotic human-machine relationships.
+            </p>
+
+            <div class="section-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div>
+                        <p class="info-label">AI & Cognitive Modeling</p>
+                        <h3>Neural Behavioral Analysis</h3>
+                        <p>Developed a machine learning model to predict user behavior transitions based on low-level interaction markers, achieving 85% accuracy in controlled environments.</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://github.com/jaltom2105" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">GitHub Repo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div>
+                        <p class="info-label">UX Research</p>
+                        <h3>Cognitive Load Interface Study</h3>
+                        <p>A comprehensive study on the impact of "Constructivist" UI patterns on user memory retention during dense data processing tasks.</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Case Study</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div>
+                        <p class="info-label">Hardware & Software</p>
+                        <h3>Automated Home-Brew Controller</h3>
+                        <p>An IoT system for precise temperature and fermentation monitoring, combining my interest in home brewing with robust sensor integration.</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://github.com/jaltom2105" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Source Code</a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 (Placeholder for more) -->
+                <div class="project-card" style="border-style: dashed; opacity: 0.6;">
+                    <div style="text-align: center; padding: 2rem 0;">
+                        <i data-lucide="plus-circle" style="width: 48px; height: 48px; margin-bottom: 1rem;"></i>
+                        <h3>Current Research</h3>
+                        <p>Investigating the potential of LLMs to act as empathetic cognitive aids for elderly users.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p><a href="mailto:jakefaltom@gmail.com" style="color: var(--text-primary); text-decoration: none;">jakefaltom@gmail.com</a></p>
+            <p style="margin-top: 0.5rem;"><a href="tel:908-963-5312" style="color: var(--text-primary); text-decoration: none;">908-963-5312</a></p>
+        </div>
+        <div class="footer-col">
+            <h3>Navigation</h3>
+            <ul style="list-style: none;">
+                <li><a href="index.html" style="color: var(--text-primary); text-decoration: none;">Home</a></li>
+                <li><a href="about.html" style="color: var(--text-primary); text-decoration: none;">About</a></li>
+                <li><a href="resume.html" style="color: var(--text-primary); text-decoration: none;">Resume</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

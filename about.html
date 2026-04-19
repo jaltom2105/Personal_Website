@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Jake Altom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 style="font-size: 1.5rem;"><a href="index.html" style="text-decoration: none; color: inherit;">J. Altom</a></h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reveal">
+            <div class="section-header">
+                <h2>The Person Behind the Work</h2>
+            </div>
+            
+            <div class="info-grid">
+                <div>
+                    <div style="margin-bottom: 2rem;">
+                        <p class="info-label">Academic Profile</p>
+                        <p><b>Junior</b> at <b>Purdue University</b></p>
+                        <p>Double Major: AI & Psychology</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <p class="info-label">Origins</p>
+                        <p>Readington, NJ</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <p class="info-label">Interests & Hobbies</p>
+                        <div class="hobby-container">
+                            <div class="hobby-chips">
+                                <button class="chip active" data-hobby="ultimate">Ultimate Frisbee</button>
+                                <button class="chip" data-hobby="golfing">Golfing</button>
+                                <button class="chip" data-hobby="brew">Home Brew</button>
+                            </div>
+                            
+                            <div class="hobby-content-area">
+                                <!-- Ultimate Pane -->
+                                <div class="hobby-panel active" id="ultimate">
+                                    <h4>Ultimate Frisbee</h4>
+                                    <p>I actively play Ultimate Frisbee at Purdue. It's more than just a sport; it's a community that emphasizes "Spirit of the Game"—a philosophy that aligns perfectly with my interest in cooperative human systems.</p>
+                                    <img src="https://picsum.photos/seed/frisbee/600/300" alt="Ultimate Frisbee" referrerPolicy="no-referrer">
+                                </div>
+                                
+                                <!-- Golfing Pane -->
+                                <div class="hobby-panel" id="golfing">
+                                    <h4>Golfing</h4>
+                                    <p>Golfing provides a unique space for mental discipline and technical precision. I enjoy the strategic aspect of the game, calculating risks and rewards on every hole.</p>
+                                    <img src="https://picsum.photos/seed/golf/600/300" alt="Golfing" referrerPolicy="no-referrer">
+                                </div>
+                                
+                                <!-- Brew Pane -->
+                                <div class="hobby-panel" id="brew">
+                                    <h4>Home Brewing</h4>
+                                    <p>Home brewing is where my interest in biology and data integration meets a tangible product. From monitoring fermentation temperatures to yeast profiling, it's a fun way to apply the scientific method outside the lab.</p>
+                                    <img src="https://picsum.photos/seed/brewing/600/300" alt="Home Brew" referrerPolicy="no-referrer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="border-left: var(--border-width) solid var(--primary-color); padding-left: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">My Journey</h3>
+                    
+                    <div style="float: right; width: 200px; margin-left: 2rem; margin-bottom: 1rem;" class="profile-container">
+                        <div class="image-accent" style="top: -10px; right: -10px;"></div>
+                        <img src="assets/about-fun.JPG" alt="Jake - Personal" class="profile-img" style="filter: grayscale(0);" onerror="this.src='https://picsum.photos/seed/fun/400/500'">
+                    </div>
+
+                    <p style="margin-bottom: 1.5rem;">
+                        I am deeply fascinated by how human thought processes can be modeled and replicated within artificial systems. My dual background in Artificial Intelligence and Psychology allows me to approach problems from both a technical and a human-centric perspective.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        At Purdue, I've focused on understanding the cognitive biases that influence decision-making and how these can be mitigated or utilized in machine learning models. I believe that the future of technology lies not just in power, but in "constructive functionality"—creating tools that are as intuitive as they are intelligent.
+                    </p>
+                    
+                    <h3 style="margin-bottom: 1rem;">Career Aspirations</h3>
+                    <p>
+                        My goal is to work at the forefront of AI development, specifically in roles that involve human-AI interaction (HAI) or ethical system design. I aim to build products that serve as a natural extension of the human mind, bridging the gap between raw data and psychological reality.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--primary-color); color: var(--secondary-color);" class="reveal">
+            <div style="text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Want to collaborate?</h2>
+                <p style="margin-bottom: 2rem;">I'm always looking for new projects and opportunities in AI, UX Research, and Data Science.</p>
+                <a href="mailto:jakefaltom@gmail.com" class="btn btn-filled" style="border-color: var(--secondary-color);">Send an Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p><a href="mailto:jakefaltom@gmail.com" style="color: var(--text-primary); text-decoration: none;">jakefaltom@gmail.com</a></p>
+            <p style="margin-top: 0.5rem;"><a href="tel:908-963-5312" style="color: var(--text-primary); text-decoration: none;">908-963-5312</a></p>
+        </div>
+        <div class="footer-col">
+            <h3>Navigation</h3>
+            <ul style="list-style: none;">
+                <li><a href="index.html" style="color: var(--text-primary); text-decoration: none;">Home</a></li>
+                <li><a href="projects.html" style="color: var(--text-primary); text-decoration: none;">Projects</a></li>
+                <li><a href="resume.html" style="color: var(--text-primary); text-decoration: none;">Resume</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
