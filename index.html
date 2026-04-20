@@ -13,79 +13,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="opening-wrapper" class="opening-up-wrapper">
+        <header>
+                <div class="logo">
+                    <h1 style="font-size: 1.5rem;">J. Altom</h1>
+                </div>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="resume.html">Resume</a>
+                    <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+                </nav>
+            </header>
 
-    <header>
-        <div class="logo">
-            <h1 style="font-size: 1.5rem;">J. Altom</h1>
+            <main>
+                <!-- Hero Section -->
+                <section class="hero reveal">
+                    <div class="hero-content">
+                        <p class="tagline">Bridging Human Cognition and Machine Intelligence</p>
+                        <h1 class="hero-title">Jake<br>Altom</h1>
+                        <p style="max-width: 500px; margin-bottom: 2rem; border-top: 1px solid var(--text-secondary); padding-top: 1rem;">
+                            Junior at <b>Purdue University</b>. Double majoring in <b>Artificial Intelligence & Psychology</b>. 
+                            Exploring the intersection of behavioral data and automated decision-making.
+                        </p>
+                        <div class="hero-btns">
+                            <a href="projects.html" class="btn btn-filled">View Work</a>
+                            <a href="about.html" class="btn">Get to Know Me</a>
+                        </div>
+                    </div>
+                    <div class="profile-container">
+                        <div class="image-accent"></div>
+                        <!-- Profile Image -->
+                        <img src="assets/IMG_8484.JPG" alt="Jake Altom" class="profile-img" onerror="this.src='https://picsum.photos/seed/jake/800/800'">
+                    </div>
+                </section>
+
+                <!-- Brief Intro / Functional Callout -->
+                <section style="background-color: var(--accent-color); color: var(--text-primary); transition: background 0.3s;" class="reveal">
+                    <div class="section-header">
+                        <h2>Functional Focus</h2>
+                    </div>
+                    <div class="section-grid">
+                        <div style="padding: 1rem; border-left: 5px solid var(--primary-color);">
+                            <h3 style="margin-bottom: 0.5rem;">AI Integration</h3>
+                            <p>Leveraging deep learning and neural architectures to solve complex computational problems.</p>
+                        </div>
+                        <div style="padding: 1rem; border-left: 5px solid var(--primary-color);">
+                            <h3 style="margin-bottom: 0.5rem;">Psychological Insight</h3>
+                            <p>Applying behavioral theory to improve user interaction and algorithmic fairness.</p>
+                        </div>
+                        <div style="padding: 1rem; border-left: 5px solid var(--primary-color);">
+                            <h3 style="margin-bottom: 0.5rem;">Technical Implementation</h3>
+                            <p>Building robust, maintainable systems with a focus on constructive, efficient design.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:jakefaltom@gmail.com" style="color: var(--text-primary); text-decoration: none;">jakefaltom@gmail.com</a></p>
+                    <p style="margin-top: 0.5rem;"><a href="tel:908-963-5312" style="color: var(--text-primary); text-decoration: none;">908-963-5312</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigation</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="about.html" style="color: var(--text-primary); text-decoration: none;">About</a></li>
+                        <li><a href="projects.html" style="color: var(--text-primary); text-decoration: none;">Projects</a></li>
+                        <li><a href="resume.html" style="color: var(--text-primary); text-decoration: none;">Resume</a></li>
+                    </ul>
+                </div>
+            </footer>
         </div>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="resume.html">Resume</a>
-            <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero reveal">
-            <div class="hero-content">
-                <p class="tagline">Bridging Human Cognition and Machine Intelligence</p>
-                <h1 class="hero-title">Jake<br>Altom</h1>
-                <p style="max-width: 500px; margin-bottom: 2rem; border-top: 1px solid var(--text-secondary); padding-top: 1rem;">
-                    Junior at <b>Purdue University</b>. Double majoring in <b>Artificial Intelligence & Psychology</b>. 
-                    Exploring the intersection of behavioral data and automated decision-making.
-                </p>
-                <div class="hero-btns">
-                    <a href="projects.html" class="btn btn-filled">View Work</a>
-                    <a href="about.html" class="btn">Get to Know Me</a>
-                </div>
-            </div>
-            <div class="profile-container">
-                <div class="image-accent"></div>
-                <!-- Profile Image -->
-                <img src="assets/IMG_8484.JPG" alt="Jake Altom" class="profile-img" onerror="this.src='https://picsum.photos/seed/jake/800/800'">
-            </div>
-        </section>
-
-        <!-- Brief Intro / Functional Callout -->
-        <section style="background-color: var(--accent-color); color: var(--text-primary); transition: background 0.3s;" class="reveal">
-            <div class="section-header">
-                <h2>Functional Focus</h2>
-            </div>
-            <div class="section-grid">
-                <div style="padding: 1rem; border-left: 5px solid var(--primary-color);">
-                    <h3 style="margin-bottom: 0.5rem;">AI Integration</h3>
-                    <p>Leveraging deep learning and neural architectures to solve complex computational problems.</p>
-                </div>
-                <div style="padding: 1rem; border-left: 5px solid var(--primary-color);">
-                    <h3 style="margin-bottom: 0.5rem;">Psychological Insight</h3>
-                    <p>Applying behavioral theory to improve user interaction and algorithmic fairness.</p>
-                </div>
-                <div style="padding: 1rem; border-left: 5px solid var(--primary-color);">
-                    <h3 style="margin-bottom: 0.5rem;">Technical Implementation</h3>
-                    <p>Building robust, maintainable systems with a focus on constructive, efficient design.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-col">
-            <h3>Contact</h3>
-            <p><a href="mailto:jakefaltom@gmail.com" style="color: var(--text-primary); text-decoration: none;">jakefaltom@gmail.com</a></p>
-            <p style="margin-top: 0.5rem;"><a href="tel:908-963-5312" style="color: var(--text-primary); text-decoration: none;">908-963-5312</a></p>
-        </div>
-        <div class="footer-col">
-            <h3>Navigation</h3>
-            <ul style="list-style: none;">
-                <li><a href="about.html" style="color: var(--text-primary); text-decoration: none;">About</a></li>
-                <li><a href="projects.html" style="color: var(--text-primary); text-decoration: none;">Projects</a></li>
-                <li><a href="resume.html" style="color: var(--text-primary); text-decoration: none;">Resume</a></li>
-            </ul>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
     <script>

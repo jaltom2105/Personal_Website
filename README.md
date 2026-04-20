@@ -1,45 +1,38 @@
-# HOW TO USE THIS WEBSITE
+# Jake Altom | Portfolio
 
-Congratulations on your new portfolio! This project follows a **Constructivist** and **Functional** design style, specifically tailored for a student in AI and Psychology.
+A professional portfolio showcasing the intersection of **Artificial Intelligence** and **Psychology**. This project serves as a digital hub for my academic work, technical projects, and personal research at Purdue University.
 
-## 1. Setup Your Assets
-Before publishing, you need to add your personal files to the `assets/` folder:
-- **Professional Photo (Home):** Name it `IMG_8484.JPG`.
-- **Personal Photo (About):** Name it `about-fun.JPG`.
-- **Resume:** Name it `Jake Altom - Resume.pdf`.
+## 🚀 Overview
 
-## 2. How to Edit Text
-- **Names/Titles:** Every HTML file (`index.html`, `about.html`, etc.) has clearly commented sections. Search for your name or school to make quick changes.
-- **Projects:** Open `projects.html` and edit the content within the `<div class="project-card">` blocks.
-- **Colors:** Open `style.css`. At the very top, you'll see a `:root` section. Change `--primary-color` (Forest Green) or `--secondary-color` (Cream) to experiment with different looks.
+This website is designed with a **Constructivist and Functional** aesthetic—prioritizing clarity, high-contrast grids, and architectural structure. It highlights my double major in AI and Psychology by bridging technical machine intelligence with human cognitive theory.
 
-## 3. How to Upload to GitHub
-1. Create a new repository on GitHub (e.g., `jake-portfolio`).
-2. Initialize git in your local folder:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio commit"
-   ```
-3. Connect and push:
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-   git push -u origin main
-   ```
+## ✨ Key Features
 
-## 4. How to Publish on GitHub Pages
-1. Go to your repository on GitHub.com.
-2. Click on **Settings**.
-3. In the left sidebar, click **Pages**.
-4. Under "Build and deployment", select **Deploy from a branch**.
-5. Select the `main` branch and the `/ (root)` folder.
-6. Click **Save**.
-7. In a few minutes, your site will be live at `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`.
+- **Dark Mode Support:** User-selectable theme with persistence via LocalStorage.
+- **Responsive Architecture:** Desktop-first design that scales gracefully to mobile devices.
+- **Scroll Reveal Animations:** Subtle entrance animations for enhanced storytelling.
+- **Interactive Project Hub:** Detailed categorization of technical and research-based work.
 
-## 5. Features
-- **Dark Mode:** A toggle is provided in the navigation. Your preference is saved using your browser's local storage.
-- **Responsive Design:** The layout automatically adjusts for mobile and desktop viewing.
-- **Constructivist Style:** High-contrast grids and bold typography provide a professional and academic vibe.
+## 🛠 Tech Stack
+
+- **Frontend:** HTML5, CSS3 (Custom Variables), Vanilla JavaScript.
+- **Iconography:** Lucide Icons.
+- **Typography:** Inter & Roboto.
+
+## 📁 Project Structure
+
+- `index.html`: Home page & professional overview.
+- `about.html`: Biographical details and psychological focus.
+- `projects.html`: Repository of AI and development work.
+- `resume.html`: Professional experience and educational background.
+- `style.css`: Core design system and grid-based layout.
+
+## 📞 Contact
+
+- **Email:** jakefaltom@gmail.com
+- **LinkedIn:** [Insert Link]
+- **Location:** Purdue University, West Lafayette, IN
 
 ---
-Built by Jake Altom (and your AI assistant).
+*For technical instructions on how to modify or deploy this site, please refer to [GUIDE.md](./GUIDE.md).*
+

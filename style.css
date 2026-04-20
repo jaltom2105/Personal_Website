@@ -42,7 +42,24 @@ body.loading {
     overflow: hidden;
 }
 
-/* --- Computer Boot Preloader --- */
+/* --- Opening Sequence Animation --- */
+.opening-up-wrapper {
+    overflow: hidden;
+    clip-path: inset(0 50% 0 50%);
+}
+
+.opening-up-animate {
+    animation: revealPage 1.2s 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+@keyframes revealPage {
+    0% {
+        clip-path: inset(0 50% 0 50%);
+    }
+    100% {
+        clip-path: inset(0 0% 0 0%);
+    }
+}
 
 /* --- Layout Structure (Constructivist Grid) --- */
 

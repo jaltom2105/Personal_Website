@@ -1,6 +1,26 @@
 // Jake Altom Portfolio - Script.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Entrance Animation Gating ---
+    const openingWrapper = document.getElementById('opening-wrapper');
+    
+    // Check if user came from inside the site
+    const isInternalNavigation = document.referrer && document.referrer.includes(window.location.hostname);
+    const skipAnimation = isInternalNavigation && sessionStorage.getItem('portfolio_opened');
+
+    if (openingWrapper) {
+        if (!skipAnimation) {
+            openingWrapper.classList.add('opening-up-wrapper');
+            setTimeout(() => {
+                openingWrapper.classList.add('opening-up-animate');
+                sessionStorage.setItem('portfolio_opened', 'true');
+            }, 100);
+        } else {
+            // No animation if already seen this session or moving between internal pages
+            openingWrapper.classList.remove('opening-up-wrapper');
+        }
+    }
+
     // --- Theme Management ---
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
