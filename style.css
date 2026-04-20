@@ -117,6 +117,87 @@ nav a:hover::after, nav a.active::after {
     margin-left: 1rem;
 }
 
+/* --- Dropdown Nav --- */
+.nav-item {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    min-width: 200px;
+    box-shadow: 10px 10px 0 var(--primary-color);
+    border: var(--border-width) solid var(--text-primary);
+    z-index: 1001;
+    padding: 1rem 0;
+}
+
+.dropdown-content a {
+    color: var(--text-primary);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    display: block;
+    font-size: 0.75rem;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 0;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--accent-color);
+}
+
+.dropdown-content a::after {
+    display: none;
+}
+
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+/* --- Project Detail Page --- */
+.project-header {
+    margin-bottom: 3rem;
+}
+
+.project-meta {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    border-bottom: var(--border-width) solid var(--primary-color);
+    padding-bottom: 2rem;
+}
+
+.project-meta-item {
+    font-size: 0.9rem;
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.project-image-large {
+    width: 100%;
+    height: 400px;
+    background-color: var(--accent-color);
+    border: var(--border-width) solid var(--text-primary);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.project-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* --- Typography --- */
 
 h1, h2, h3 {

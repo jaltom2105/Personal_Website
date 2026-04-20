@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognitive Load Interface Study | Jake Altom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 style="font-size: 1.5rem;"><a href="index.html" style="text-decoration: none; color: inherit;">J. Altom</a></h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="nav-item">
+                <a href="projects.html" class="active">Projects</a>
+                <div class="dropdown-content">
+                    <a href="project-neural-behavioral.html">Neural Behavioral Analysis</a>
+                    <a href="project-cognitive-load.html">Cognitive Load Study</a>
+                    <a href="project-home-brew.html">Home-Brew Controller</a>
+                    <a href="project-research.html">AI Empathy Modeling</a>
+                    <a href="project-ai-portfolio.html">AI Portfolio Development</a>
+                </div>
+            </div>
+            <a href="resume.html">Resume</a>
+            <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reveal">
+            <div class="project-header">
+                <p class="tagline">UX Research</p>
+                <h1 style="font-size: clamp(2rem, 8vw, 4rem);">Cognitive Load Interface Study</h1>
+            </div>
+
+            <div class="project-meta">
+                <div class="project-meta-item">
+                    <p class="info-label">Role</p>
+                    <p>UX Researcher</p>
+                </div>
+                <div class="project-meta-item">
+                    <p class="info-label">Period</p>
+                    <p>Spring 2024</p>
+                </div>
+                <div class="project-meta-item">
+                    <p class="info-label">Tools</p>
+                    <p>Qualtrics, Figma, Python (Stats)</p>
+                </div>
+            </div>
+
+            <div class="project-image-large">
+                <img src="https://picsum.photos/seed/ui/1200/600" alt="UI Patterns Eye Tracking" referrerPolicy="no-referrer">
+            </div>
+
+            <div class="project-content">
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Project Overview</h3>
+                    <p style="margin-bottom: 1.5rem;">
+                        This study investigated how "Constructivist" UI patterns—characterized by high-contrast grids and explicit functional boundaries—affect user memory retention during dense data processing tasks.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        Participants were divided into two groups: one using a standard "fluid" Interface and one using an "architectural" Interface (Constructivist). Results showed a significant improvement in rapid error detection for the Constructivist group.
+                    </p>
+                    
+                    <h3 style="margin-bottom: 1rem;">Key Findings</h3>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;">Constructivist patterns reduced "decision fatigue" over 2-hour prolonged usage sessions.</li>
+                        <li style="margin-bottom: 0.5rem;">Explicit grid lines served as high-value orienting cues, reducing cognitive overhead.</li>
+                        <li style="margin-bottom: 0.5rem;">Users reported higher confidence in data accuracy when using structured, functional layouts.</li>
+                    </ul>
+                </div>
+                
+                <aside>
+                    <div style="background-color: var(--accent-color); padding: 2rem; border: var(--border-width) solid var(--primary-color);">
+                        <h4 style="margin-bottom: 1rem;">Case Study</h4>
+                        <a href="#" class="btn btn-filled" style="width: 100%; margin-bottom: 1rem; text-align: center;">Read Full Report</a>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary);">
+                            Download the whitepaper for a detailed breakdown of the statistical methods and psychological framework used.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p><a href="mailto:jakefaltom@gmail.com" style="color: var(--text-primary); text-decoration: none;">jakefaltom@gmail.com</a></p>
+        </div>
+        <div class="footer-col">
+            <h3>Navigation</h3>
+            <ul style="list-style: none;">
+                <li><a href="index.html" style="color: var(--text-primary); text-decoration: none;">Home</a></li>
+                <li><a href="about.html" style="color: var(--text-primary); text-decoration: none;">About</a></li>
+                <li><a href="resume.html" style="color: var(--text-primary); text-decoration: none;">Resume</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
