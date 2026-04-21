@@ -5,11 +5,15 @@ This guide contains instructions on how to maintain, update, and deploy the Jake
 ## 1. Setup Your Assets
 For your assets to appear on GitHub Pages, they **must** be placed in the `public/assets/` folder. This ensures the technical build process includes them in your final website.
 
-- **Professional Photo (Home):** Place in `public/assets/IMG_8484.JPG`.
-- **Personal Photo (About):** Place in `public/assets/about-fun.JPG` (currently missing).
+- **Professional Photo (Home):** Place in `public/assets/home-page-photo.jpg`.
+- **Personal Photo (About):** Place in `public/assets/about-profile.jpg`.
 - **Resume:** Place in `public/assets/jake-altom-resume.pdf`. 
+- **Interest Photos (About - PDFs):** 
+    - `public/assets/about-frisbee.pdf`
+    - `public/assets/about-golf.pdf`
+    - `public/assets/about-homebrew.pdf`
 
-> **Note:** Filenames are case-sensitive on GitHub. Ensure they match the code exactly (e.g., `.JPG` vs `.jpg`).
+> **Note:** Filenames are case-sensitive on web servers. I have standardized these to lowercase to avoid issues. Ensure your filenames match EXACTLY (e.g., `.jpg` not `.JPG` or `.pdf` not `.PDF`).
 
 ## 2. How to Edit Content
 - **Text Content:** Every HTML file (`index.html`, `about.html`, etc.) has clearly commented sections. Search for specific text to make updates.
