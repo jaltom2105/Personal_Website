@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
 </head>
 <body>
 
@@ -22,10 +24,7 @@
             <div class="nav-item">
                 <a href="projects.html">Projects</a>
                 <div class="dropdown-content">
-                    <a href="project-neural-behavioral.html">Neural Behavioral Analysis</a>
-                    <a href="project-cognitive-load.html">Cognitive Load Study</a>
-                    <a href="project-home-brew.html">Home-Brew Controller</a>
-                    <a href="project-research.html">AI Empathy Modeling</a>
+                    <a href="project-unity-ml.html">Unity ML Agents</a>
                     <a href="project-ai-portfolio.html">AI Portfolio Development</a>
                 </div>
             </div>
@@ -51,6 +50,7 @@
                         <p class="info-label">Origins</p>
                         <p>Readington, NJ</p>
                     </div>
+                    
                     <div style="margin-bottom: 2rem;">
                         <p class="info-label">Interests & Hobbies</p>
                         <div class="hobby-container">
@@ -65,21 +65,21 @@
                                 <div class="hobby-panel active" id="ultimate">
                                     <h4>Ultimate Frisbee</h4>
                                     <p>I actively play Ultimate Frisbee at Purdue. It's more than just a sport; it's a community that emphasizes "Spirit of the Game"—a philosophy that aligns perfectly with my interest in cooperative human systems.</p>
-                                    <iframe src="assets/about-frisbee.pdf#toolbar=0&view=FitV" width="100%" height="250px" style="border: var(--border-width) solid var(--primary-color); max-width: 500px; display: block; margin: 1rem auto;"></iframe>
+                                    <iframe src="/assets/about-frisbee.pdf#toolbar=0&view=FitV" width="100%" height="250px" style="border: var(--border-width) solid var(--primary-color); max-width: 500px; display: block; margin: 1rem auto;"></iframe>
                                 </div>
                                 
                                 <!-- Golfing Pane -->
                                 <div class="hobby-panel" id="golfing">
                                     <h4>Golfing</h4>
                                     <p>Golfing provides a unique space for mental discipline and technical precision. I enjoy the strategic aspect of the game, calculating risks and rewards on every hole.</p>
-                                    <iframe src="assets/about-golf.pdf#toolbar=0&view=FitV" width="100%" height="250px" style="border: var(--border-width) solid var(--primary-color); max-width: 500px; display: block; margin: 1rem auto;"></iframe>
+                                    <iframe src="/assets/about-golf.pdf#toolbar=0&view=FitV" width="100%" height="250px" style="border: var(--border-width) solid var(--primary-color); max-width: 500px; display: block; margin: 1rem auto;"></iframe>
                                 </div>
                                 
                                 <!-- Brew Pane -->
                                 <div class="hobby-panel" id="brew">
                                     <h4>Home Brewing</h4>
                                     <p>Home brewing is where my interest in biology and data integration meets a tangible product. From monitoring fermentation temperatures to yeast profiling, it's a fun way to apply the scientific method outside the lab.</p>
-                                    <iframe src="assets/about-homebrew.pdf#toolbar=0&view=FitV" width="100%" height="250px" style="border: var(--border-width) solid var(--primary-color); max-width: 500px; display: block; margin: 1rem auto;"></iframe>
+                                    <iframe src="/assets/about-homebrew.pdf#toolbar=0&view=FitV" width="100%" height="250px" style="border: var(--border-width) solid var(--primary-color); max-width: 500px; display: block; margin: 1rem auto;"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                     
                     <div style="float: right; width: 200px; margin-left: 2rem; margin-bottom: 1rem;" class="profile-container">
                         <div class="image-accent" style="top: -10px; right: -10px;"></div>
-                        <img src="assets/about-profile.jpg" alt="Jake - Personal" class="profile-img" style="filter: grayscale(0);" onerror="this.src='https://picsum.photos/seed/fun/400/500'">
+                        <img src="/assets/about-profile.jpg" alt="Jake - Personal" class="profile-img" style="filter: grayscale(0);" onerror="this.src='https://picsum.photos/seed/fun/400/500'">
                     </div>
 
                     <p style="margin-bottom: 1.5rem;">
@@ -109,8 +109,27 @@
             </div>
         </section>
 
+        <!-- Globe Section -->
+        <section class="reveal" style="padding: 4rem 5%; border-top: var(--border-width) solid var(--primary-color);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto;">
+                <div>
+                    <p class="info-label">Global Presence</p>
+                    <h3>Travel Geography</h3>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">
+                        A mapping of my experiences across cognitive and physical frontiers. This interactive visualization tracks my journey through various geographic domains.
+                    </p>
+                    <p style="margin-top: 0.5rem; border-left: 3px solid var(--primary-color); padding-left: 1rem; font-style: italic; font-size: 0.9rem;">
+                        Click and drag to explore the sphere. More coordinates coming soon.
+                    </p>
+                </div>
+                <div id="globe-parent" style="width: 100%; aspect-ratio: 1; display: flex; justify-content: center; align-items: center; background: var(--accent-color); border: var(--border-width) solid var(--primary-color); cursor: grab; position: relative; overflow: hidden;">
+                    <canvas id="globe-canvas" style="width: 100%; height: 100%;"></canvas>
+                </div>
+            </div>
+        </section>
+
         <section style="background-color: var(--primary-color); color: var(--secondary-color);" class="reveal">
-            <div style="text-align: center;">
+            <div style="text-align: center; padding: 4rem 2rem;">
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Want to collaborate?</h2>
                 <p style="margin-bottom: 2rem;">I'm always looking for new projects and opportunities in AI, UX Research, and Data Science.</p>
                 <a href="mailto:jakefaltom@gmail.com" class="btn btn-filled" style="border-color: var(--secondary-color);">Send an Email</a>
@@ -133,6 +152,12 @@
             </ul>
         </div>
     </footer>
+    
+    <!-- Jake the Tinkerer Sprite -->
+    <div class="tinkerer-container">
+        <div class="tinkerer-bubble">Analyzing cognitive patterns...</div>
+        <i data-lucide="wrench" class="gear-icon"></i>
+    </div>
 
     <script src="script.js"></script>
     <script>
