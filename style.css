@@ -45,7 +45,7 @@ body.loading {
 /* --- Opening Sequence Animation --- */
 .opening-up-wrapper {
     overflow: hidden;
-    clip-path: inset(0 50% 0 50%);
+    clip-path: none;
 }
 
 .opening-up-animate {
