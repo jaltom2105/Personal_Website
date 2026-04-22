@@ -276,6 +276,23 @@ h1, h2, h3 {
     object-position: center 30%; /* Specific crop for home page sky */
 }
 
+/* --- Experiments Grid --- */
+.exp-card {
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition) !important;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 10px 10px 0 var(--primary-color);
+}
+
+.exp-card.placeholder:hover {
+    transform: none;
+    border-color: var(--text-secondary);
+    box-shadow: none;
+}
+
 .profile-img:hover {
     filter: grayscale(0);
 }
