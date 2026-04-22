@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ctx = canvas.getContext('2d');
         let dots = [];
         const dotCount = 25; // Decreased count
-        const connectionDist = 120; // Slightly increased for fewer but cleaner lines
+        const connectionDist = 140; // Increased distance for more visible connections
         
         const initCanvas = () => {
             canvas.width = canvas.offsetWidth;
@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 dots.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.3, // Slower velocity
-                    vy: (Math.random() - 0.5) * 0.3  // Slower velocity
+                    vx: (Math.random() - 0.5) * 0.4, // Slightly faster than the last "subtle" fix
+                    vy: (Math.random() - 0.5) * 0.4
                 });
             }
         };
@@ -157,8 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (dot.y < 0 || dot.y > canvas.height) dot.vy *= -1;
 
                     ctx.beginPath();
-                    ctx.arc(dot.x, dot.y, 1.5, 0, Math.PI * 2); // Smaller dots
-                    ctx.fillStyle = `rgba(${color}, 0.4)`; // Subtler color
+                    ctx.arc(dot.x, dot.y, 3, 0, Math.PI * 2); // Bolder dots
+                    ctx.fillStyle = `rgba(${color}, 0.8)`; // Stronger color
                     ctx.fill();
                 }
 
@@ -172,8 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         ctx.beginPath();
                         ctx.moveTo(dot.x, dot.y);
                         ctx.lineTo(other.x, other.y);
-                        ctx.strokeStyle = `rgba(${color}, ${1 - dist/connectionDist})`;
-                        ctx.lineWidth = dot.isMouse || other.isMouse ? 1 : 0.5;
+                        ctx.strokeStyle = `rgba(${color}, ${0.8 - dist/connectionDist})`; // Bolder lines
+                        ctx.lineWidth = dot.isMouse || other.isMouse ? 2 : 1.5;
                         ctx.stroke();
                     }
                 }

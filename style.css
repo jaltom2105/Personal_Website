@@ -68,7 +68,7 @@ header {
     padding: 2rem 5%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center; /* Changed from flex-end to fix vertical alignment */
     position: sticky;
     top: 0;
     background-color: var(--secondary-color);
@@ -78,6 +78,7 @@ header {
 nav {
     display: flex;
     gap: 2rem;
+    align-items: center; /* Ensure nav items are also centered vertically */
 }
 
 nav a {

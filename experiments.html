@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Experiments | Jake Altom</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="opening-wrapper"></div>
+    
+    <header>
+        <div class="logo">
+            <h1 style="font-size: 1.5rem;"><a href="index.html" style="text-decoration: none; color: inherit;">J. Altom</a></h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="nav-item">
+                <a href="projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a href="project-unity-ml.html">Unity ML Agents</a>
+                    <a href="project-ai-portfolio.html">AI Portfolio Development</a>
+                </div>
+            </div>
+            <a href="resume.html">Resume</a>
+            <a href="experiments.html" class="active">Experiments</a>
+            <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main class="page-transition">
+        <section class="reveal">
+            <div class="section-tag">AI_LABORATORY</div>
+            <h1 class="hero-title">EXPERIMENTS</h1>
+            <p class="tagline">Under Development</p>
+            
+            <div style="border-left: var(--border-width) solid var(--primary-color); padding-left: 2rem; margin-top: 3rem;">
+                <p style="margin-bottom: 2rem; max-width: 800px; font-family: var(--font-mono);">
+                    > Initializing experimental environment...<br>
+                    > Status: Pending creative direction.<br>
+                    > Check back soon for AI Studio prototypes.
+                </p>
+
+                <div style="border: 1px dashed var(--primary-color); padding: 5rem; text-align: center; color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
+                    [SPACE_RESERVED_FOR_EXPERIMENTAL_DATA]
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 5rem; padding: 2rem; border-top: var(--border-width) solid var(--primary-color);">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="font-family: var(--font-mono); font-size: 0.8rem;">© 2024 JAKE ALTOM / COGNITIVE_LOG</p>
+            <div class="social-links">
+                <a href="#" style="margin-left: 1rem;"><i data-lucide="linkedin"></i></a>
+                <a href="#" style="margin-left: 1rem;"><i data-lucide="github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
