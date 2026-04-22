@@ -66,10 +66,9 @@
                                     <h4>Ultimate Frisbee</h4>
                                     <p>I actively play Ultimate Frisbee at Purdue. It's more than just a sport; it's a community that emphasizes "Spirit of the Game"—a philosophy that aligns perfectly with my interest in cooperative human systems.</p>
                                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                                        <div style="flex: 1; height: 200px; background: var(--accent-color); display: flex; align-items: center; justify-content: center; border: var(--border-width) solid var(--primary-color);">
-                                            <i data-lucide="wind" style="width: 48px; height: 48px; color: var(--primary-color);"></i>
+                                        <div style="flex: 1; height: 300px; border: var(--border-width) solid var(--primary-color);">
+                                            <iframe src="/assets/about-frisbee.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
                                         </div>
-                                        <img src="https://picsum.photos/seed/frisbee-jake/400/300" alt="Ultimate Frisbee" style="width: 60%; height: 200px; object-fit: cover; border: var(--border-width) solid var(--primary-color);" referrerPolicy="no-referrer">
                                     </div>
                                 </div>
                                 
@@ -77,11 +76,10 @@
                                 <div class="hobby-panel" id="golfing">
                                     <h4>Golfing</h4>
                                     <p>Golfing provides a unique space for mental discipline and technical precision. I enjoy the strategic aspect of the game, calculating risks and rewards on every hole.</p>
-                                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-direction: row-reverse;">
-                                        <div style="flex: 1; height: 200px; background: var(--accent-color); display: flex; align-items: center; justify-content: center; border: var(--border-width) solid var(--primary-color);">
-                                            <i data-lucide="target" style="width: 48px; height: 48px; color: var(--primary-color);"></i>
+                                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                                        <div style="flex: 1; height: 300px; border: var(--border-width) solid var(--primary-color);">
+                                            <iframe src="/assets/about-golf.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
                                         </div>
-                                        <img src="https://picsum.photos/seed/golf-jake/400/300" alt="Golfing" style="width: 60%; height: 200px; object-fit: cover; border: var(--border-width) solid var(--primary-color);" referrerPolicy="no-referrer">
                                     </div>
                                 </div>
                                 
@@ -90,10 +88,9 @@
                                     <h4>Home Brewing</h4>
                                     <p>Home brewing is where my interest in biology and data integration meets a tangible product. From monitoring fermentation temperatures to yeast profiling, it's a fun way to apply the scientific method outside the lab.</p>
                                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                                        <div style="flex: 1; height: 200px; background: var(--accent-color); display: flex; align-items: center; justify-content: center; border: var(--border-width) solid var(--primary-color);">
-                                            <i data-lucide="beaker" style="width: 48px; height: 48px; color: var(--primary-color);"></i>
+                                        <div style="flex: 1; height: 300px; border: var(--border-width) solid var(--primary-color);">
+                                            <iframe src="/assets/about-homebrew.pdf" style="width: 100%; height: 100%; border: none;"></iframe>
                                         </div>
-                                        <img src="https://picsum.photos/seed/brew-jake/400/300" alt="Home Brewing" style="width: 60%; height: 200px; object-fit: cover; border: var(--border-width) solid var(--primary-color);" referrerPolicy="no-referrer">
                                     </div>
                                 </div>
                             </div>
@@ -176,14 +173,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Diagnostic for images
-        const assets = ["assets/home-page-photo.jpg", "/assets/home-page-photo.jpg", "public/assets/home-page-photo.jpg"];
-        assets.forEach(path => {
-            fetch(path).then(r => {
-                if(r.ok) console.log(`[Asset found]: ${path}`);
-                else console.warn(`[Asset missing]: ${path} (${r.status})`);
-            }).catch(e => console.error(`[Asset error]: ${path}`, e));
-        });
         lucide.createIcons();
     </script>
 </body>
