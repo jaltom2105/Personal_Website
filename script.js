@@ -293,42 +293,80 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
                 
-                // Set colors based on theme
+                // Colors
                 const colors = isDark ? {
-                    sea: '#000000',
+                    sea: '#080c08',
                     land: '#2D5A27',
-                    stroke: 'rgba(76, 175, 80, 0.3)',
-                    outline: '#4CAF50'
+                    stroke: 'rgba(76, 175, 80, 0.4)',
+                    outline: '#4CAF50',
+                    dots: '#cfb991' // Purdue Gold
                 } : {
-                    sea: '#f8f8f8',
+                    sea: '#f0f4f0',
                     land: '#4CAF50',
                     stroke: 'rgba(45, 90, 39, 0.2)',
-                    outline: '#2D5A27'
+                    outline: '#2D5A27',
+                    dots: '#8E793E' 
                 };
 
-                // Sphere background
+                // 1. Sphere background
                 context.beginPath();
                 path({type: 'Sphere'});
                 context.fillStyle = colors.sea;
                 context.fill();
 
-                // Land
+                // 2. Graticule (Grid lines) for better visibility
+                const graticule = d3.geoGraticule();
+                context.beginPath();
+                path(graticule());
+                context.strokeStyle = colors.stroke;
+                context.lineWidth = 0.5;
+                context.stroke();
+
+                // 3. Land
                 if (world) {
                     context.beginPath();
                     path(world);
                     context.fillStyle = colors.land;
                     context.fill();
-                    context.strokeStyle = colors.stroke;
-                    context.lineWidth = 0.5;
-                    context.stroke();
                 }
 
-                // Globe Outline
+                // 4. Globe Outline
                 context.beginPath();
                 path({type: 'Sphere'});
                 context.strokeStyle = colors.outline;
-                context.lineWidth = 1.5;
+                context.lineWidth = 2;
                 context.stroke();
+
+                // 5. Markers (Visited Locations)
+                const locations = [
+                    { lat: 40.4237, lon: -86.9212, name: "Purdue University" },
+                    { lat: 40.5734, lon: -74.7293, name: "Readington, NJ" }
+                ];
+
+                locations.forEach(d => {
+                    const coord = projection([d.lon, d.lat]);
+                    const gdistance = d3.geoDistance([d.lon, d.lat], [-rotation[0], -rotation[1]]);
+                    
+                    // Only draw if on the visible hemisphere
+                    if (gdistance < Math.PI / 2) {
+                        context.beginPath();
+                        context.arc(coord[0], coord[1], 4, 0, 2 * Math.PI);
+                        context.fillStyle = colors.dots;
+                        context.fill();
+                        context.strokeStyle = "#fff";
+                        context.lineWidth = 1;
+                        context.stroke();
+                        
+                        // Pulsing effect
+                        const pulse = Math.sin(now / 300) * 4 + 6;
+                        context.beginPath();
+                        context.arc(coord[0], coord[1], pulse, 0, 2 * Math.PI);
+                        context.strokeStyle = colors.dots;
+                        context.globalAlpha = 0.4;
+                        context.stroke();
+                        context.globalAlpha = 1.0;
+                    }
+                });
 
                 requestAnimationFrame(render);
             }
