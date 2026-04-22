@@ -262,11 +262,17 @@ h1, h2, h3 {
 
 .profile-img {
     width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border: var(--border-width) solid var(--primary-color);
     filter: grayscale(0.5);
     transition: filter var(--transition);
+}
+
+.hero .profile-img {
+    aspect-ratio: 1/1.2;
+    object-fit: cover;
+    object-position: center 30%; /* Specific crop for home page sky */
 }
 
 .profile-img:hover {
@@ -389,11 +395,9 @@ section {
 }
 
 .hobby-panel img {
-    margin-top: 1rem;
     width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border: 1px solid var(--primary-color);
+    height: auto;
+    display: block;
 }
 
 @keyframes fadeIn {

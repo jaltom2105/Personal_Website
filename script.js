@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (canvas) {
         const ctx = canvas.getContext('2d');
         let dots = [];
-        const dotCount = 40;
-        const connectionDist = 100;
+        const dotCount = 25; // Decreased count
+        const connectionDist = 120; // Slightly increased for fewer but cleaner lines
         
         const initCanvas = () => {
             canvas.width = canvas.offsetWidth;
@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 dots.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5
+                    vx: (Math.random() - 0.5) * 0.3, // Slower velocity
+                    vy: (Math.random() - 0.5) * 0.3  // Slower velocity
                 });
             }
         };
@@ -157,8 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (dot.y < 0 || dot.y > canvas.height) dot.vy *= -1;
 
                     ctx.beginPath();
-                    ctx.arc(dot.x, dot.y, 2, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(${color}, 0.5)`;
+                    ctx.arc(dot.x, dot.y, 1.5, 0, Math.PI * 2); // Smaller dots
+                    ctx.fillStyle = `rgba(${color}, 0.4)`; // Subtler color
                     ctx.fill();
                 }
 
