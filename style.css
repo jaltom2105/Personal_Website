@@ -5,6 +5,7 @@
 
 :root {
     --primary-color: #2D5A27;    /* Forest Green */
+    --primary-color-rgb: 45, 90, 39;
     --secondary-color: #F8F7F2;  /* Slightly warmer Cream */
     --accent-color: #E9E5D4;     /* Darker Cream for contrast */
     --text-primary: #1A1A1A;
@@ -17,6 +18,7 @@
 
 [data-theme="dark"] {
     --primary-color: #4CAF50;    /* Brighter Green for Dark Mode */
+    --primary-color-rgb: 76, 175, 80;
     --secondary-color: #121212;  /* Dark Background */
     --accent-color: #1E1E1E;     /* Dark Surface */
     --text-primary: #F8F7F2;

@@ -27,6 +27,7 @@
                 </div>
             </div>
             <a href="resume.html">Resume</a>
+            <a href="experiments.html">Experiments</a>
             <button id="theme-toggle" class="theme-toggle">Dark Mode</button>
         </nav>
     </header>
@@ -41,41 +42,69 @@
             <div class="project-meta">
                 <div class="project-meta-item">
                     <p class="info-label">Keywords</p>
-                    <p>Reinforcement Learning, Unity Engine, C#</p>
+                    <p>Reinforcement Learning, Unity Engine (C#), Python, PyTorch</p>
                 </div>
                 <div class="project-meta-item">
                     <p class="info-label">Status</p>
-                    <p>In Progress / Placeholder</p>
+                    <p>Phase 3: Deep Dive (In Progress)</p>
+                </div>
+                <div class="project-meta-item">
+                    <p class="info-label">Source</p>
+                    <p><a href="https://github.com/jaltom2105/unity-ml-agents-project" target="_blank" style="color: var(--text-primary); text-decoration: underline;">GitHub Repository</a></p>
                 </div>
             </div>
 
             <div class="project-content">
                 <div>
-                    <h3 style="margin-bottom: 1rem;">Project Overview</h3>
+                    <h3 style="margin-bottom: 1rem;">Project Origin</h3>
                     <p style="margin-bottom: 1.5rem;">
-                        This project involves exploring the implementation of Reinforcement Learning (RL) within the Unity Game Engine. 
-                        By utilizing the ML-Agents toolkit, I am developing specialized environments where autonomous agents learn 
-                        complex behaviors through reward-based feedback loops.
+                        This project was inspired by watching YouTube videos of machine learning models learning to do complex tasks—like playing soccer or "Red Light, Green Light." I wanted to figure out how to replicate those results myself to get a better understanding of how machine learning actually works.
                     </p>
                     <p style="margin-bottom: 1.5rem;">
-                        The current focus is on building a simulation where agents must navigate dynamic obstacles and perform 
-                        collaborative tasks, testing the limits of multi-agent reinforcement learning in high-fidelity 3D spaces.
+                        I found out that Unity has its own ML-Agents toolkit, so I'm using it to start with their examples and eventually move on to designing and training my own custom agents from scratch.
                     </p>
                     
-                    <h3 style="margin-bottom: 1rem;">Core Objectives</h3>
-                    <ul style="list-left: 1.5rem; margin-bottom: 1.5rem;">
-                        <li style="margin-bottom: 0.5rem;">Design and build custom Unity environments optimized for high-performance training.</li>
-                        <li style="margin-bottom: 0.5rem;">Implement PPO (Proximal Policy Optimization) and SAC (Soft Actor-Critic) algorithms via the ML-Agents SDK.</li>
-                        <li style="margin-bottom: 0.5rem;">Analyze agent behavior to identify emergent strategies in competitive and cooperative scenarios.</li>
-                    </ul>
+                    <h3 style="margin-bottom: 1rem;">The Tech Stack</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; font-size: 0.85rem;">
+                        <div style="border: 1px solid var(--primary-color); padding: 1rem;">
+                            <strong>Simulation:</strong> Unity 2022.3 LTS
+                        </div>
+                        <div style="border: 1px solid var(--primary-color); padding: 1rem;">
+                            <strong>Training Backend:</strong> Python 3.10 & PyTorch
+                        </div>
+                        <div style="border: 1px solid var(--primary-color); padding: 1rem;">
+                            <strong>Hardware:</strong> NVIDIA RTX 5070 (CUDA 12.4)
+                        </div>
+                        <div style="border: 1px solid var(--primary-color); padding: 1rem;">
+                            <strong>Visualization:</strong> TensorBoard
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom: 1rem;">Progress Milestones</h3>
+                    <div style="font-family: var(--font-mono); font-size: 0.8rem; border: var(--border-width) solid var(--primary-color); margin-bottom: 2rem;">
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; border-bottom: 1px solid var(--primary-color); background: var(--primary-color); color: var(--secondary-color);">
+                            <span>PHASE</span><span>STATUS</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <span>Infrastructure & Setup</span><span style="color: green;">COMPLETE</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <span>Environment Config</span><span style="color: green;">COMPLETE</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem;">
+                            <span>Deep Dive into PPO/Rewards</span><span style="color: var(--primary-color);">IN_PROGRESS</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <aside>
                     <div style="background-color: var(--accent-color); padding: 2rem; border: var(--border-width) solid var(--primary-color);">
-                        <h4 style="margin-bottom: 1rem;">Current Status</h4>
-                        <p style="font-size: 0.8rem; color: var(--text-secondary);">
-                            This project is currently in the early development phase. Modeling scripts and environment builds will be shared as the research progresses toward a stable release.
-                        </p>
+                        <h4 style="margin-bottom: 1rem;">Project Goals</h4>
+                        <ul style="font-size: 0.8rem; padding-left: 1rem;">
+                            <li style="margin-bottom: 0.5rem;">Master GPU-accelerated RL training.</li>
+                            <li style="margin-bottom: 0.5rem;">Implement sac (Soft Actor-Critic) on custom agents.</li>
+                            <li style="margin-bottom: 0.5rem;">Document emergent strategies for future replication.</li>
+                        </ul>
                     </div>
                 </aside>
             </div>
@@ -93,6 +122,7 @@
                 <li><a href="index.html" style="color: var(--text-primary); text-decoration: none;">Home</a></li>
                 <li><a href="about.html" style="color: var(--text-primary); text-decoration: none;">About</a></li>
                 <li><a href="resume.html" style="color: var(--text-primary); text-decoration: none;">Resume</a></li>
+                <li><a href="experiments.html" style="color: var(--text-primary); text-decoration: none;">Experiments</a></li>
             </ul>
         </div>
     </footer>

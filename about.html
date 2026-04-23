@@ -129,13 +129,16 @@
                     <p class="info-label">Global Presence</p>
                     <h3>Travel Geography</h3>
                     <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">
-                        A mapping of my experiences across cognitive and physical frontiers. This interactive visualization tracks my journey through various geographic domains.
+                        A mapping of my experiences across cognitive and physical frontiers. This interactive visualization tracks my journey through the US, Central America, the Caribbean, Europe, Japan, and Australia.
                     </p>
                     <p style="margin-top: 0.5rem; border-left: 3px solid var(--primary-color); padding-left: 1rem; font-style: italic; font-size: 0.9rem;">
                         Click and drag to explore the sphere. More coordinates coming soon.
                     </p>
                 </div>
-                <div id="globe-parent" style="width: 100%; height: 500px; max-height: 80vh; display: flex; justify-content: center; align-items: center; background: var(--accent-color); border: var(--border-width) solid var(--primary-color); cursor: grab; position: relative; overflow: hidden;">
+                <div id="globe-parent" style="width: 100%; height: 500px; max-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--accent-color); border: var(--border-width) solid var(--primary-color); cursor: grab; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 1rem; left: 1rem; z-index: 5; background: rgba(var(--primary-color-rgb), 0.1); padding: 0.5rem 1rem; border-radius: 4px; pointer-events: none;">
+                        <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--primary-color); font-weight: bold;">LIVE_MAP // TOTAL_NODES: 15</span>
+                    </div>
                     <canvas id="globe-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
                 </div>
             </div>

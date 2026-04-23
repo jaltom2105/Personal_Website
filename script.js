@@ -340,7 +340,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 5. Markers (Visited Locations)
                 const locations = [
                     { lat: 40.4237, lon: -86.9212, name: "Purdue University" },
-                    { lat: 40.5734, lon: -74.7293, name: "Readington, NJ" }
+                    { lat: 40.5734, lon: -74.7293, name: "Readington, NJ" },
+                    { lat: -33.8688, lon: 151.2093, name: "Sydney, Australia" },
+                    { lat: -37.8136, lon: 144.9631, name: "Melbourne, Australia" },
+                    { lat: -16.4836, lon: 145.4653, name: "Port Douglas, Australia" },
+                    { lat: -25.3444, lon: 131.0369, name: "Uluru, Australia" },
+                    { lat: 21.1619, lon: -86.8515, name: "Cancun, Mexico" },
+                    { lat: 41.9028, lon: 12.4964, name: "Rome, Italy" },
+                    { lat: 9.9281, lon: -84.0907, name: "Costa Rica" },
+                    { lat: 18.4655, lon: -66.1057, name: "Puerto Rico" },
+                    { lat: 18.5601, lon: -68.3725, name: "Punta Cana, DR" },
+                    { lat: 21.3069, lon: -157.8583, name: "Hawaii" },
+                    { lat: 30.2672, lon: -97.7431, name: "Texas" },
+                    { lat: 25.7617, lon: -80.1918, name: "Florida" },
+                    { lat: 35.6762, lon: 139.6503, name: "Japan" }
                 ];
 
                 locations.forEach(d => {
